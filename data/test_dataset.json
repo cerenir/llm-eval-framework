@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "prompt": "Resume el estado del servidor.",
+    "llm_response": "El servidor está operativo y funcionando correctamente sin errores.",
+    "reference_human": "El servidor funciona correctamente y está operativo.",
+    "expected_status": true
+  },
+  {
+    "id": 2,
+    "prompt": "Resume el error del sistema.",
+    "llm_response": "Se produjo un fallo crítico por falta de memoria RAM en el nodo primario.",
+    "reference_human": "Error de conexión en la base de datos debido al timeout.",
+    "expected_status": false
+  }
+]

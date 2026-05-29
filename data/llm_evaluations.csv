@@ -1,0 +1,3 @@
+id,prompt,llm_response,reference_human,expected_status
+1,Resume el log de error,Fallo de disco en nodo 2,Error crítico en el disco del nodo 2,True
+2,Resume la petición de soporte,El usuario quiere la baja del servicio,El cliente solicita el reembolso y cancelación,False
