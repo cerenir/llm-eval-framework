@@ -1,0 +1,27 @@
+name: Pipeline de Evaluacion de Calidad LLM
+
+on:
+  push:
+    branches: [ main, master ]
+
+jobs:
+  ejecutar-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Descargar codigo
+      uses: actions/checkout@v4
+
+    - name: Configurar Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+
+    - name: Instalar dependencias
+      run: |
+        python -m pip install --upgrade pip
+        pip install pandas pytest pytest-mock pytest-html
+
+    - name: Lanzar bateria de pruebas de IA
+      run: |
+        python -m pytest --html=reporte_cloud.html --self-contained-html
